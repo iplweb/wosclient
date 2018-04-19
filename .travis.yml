@@ -30,3 +30,5 @@ matrix:
   include:
     - python: 3.6
       env: TOXENV=flake8
+    - python: 3.6
+      env: TOXENV=py36
