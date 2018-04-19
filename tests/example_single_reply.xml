@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response xmlns="http://www.isinet.com/xrpc41" src="app.id=InternalVIVODemo">
+<fn name="LinksAMR.retrieve" rc="OK">
+<map>
+<map name="0">
+<map name="WOS">
+<val name="sourceURL"><![CDATA[http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=PARTNER_APP&SrcAuth=LinksAMR&KeyUT=WOS:000276621200002&DestLinkType=FullRecord&DestApp=ALL_WOS&UsrCustomerID=536ab1eb96204d8944f0b2ff5513dbea]]></val>
+<val name="timesCited">123</val>
+<val name="pmid">19883697</val>
+<val name="ut">000276621200002</val>
+<val name="doi">10.1016/j.bbr.2009.10.030</val>
+</map>
+</map>
+</map>
+</fn>
+</response>
