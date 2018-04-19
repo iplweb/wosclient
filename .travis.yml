@@ -24,3 +24,9 @@ deploy:
     tags: true
     repo: mpasternak/wosclient
     python: 3.6
+
+
+matrix:
+  include:
+    - python: 3.6
+      env: TOXENV=flake8
