@@ -17,12 +17,12 @@ deploy:
   on:
     tags: true
     repo: iplweb/wosclient
+    branch: master
     python: 3.6
-    env: TOXENV=py36
 
 matrix:
   include:
-    - python: 3.6
-      env: TOXENV=flake8
+#    - python: 3.6
+#      env: TOXENV=flake8
     - python: 3.6
       env: TOXENV=py36
