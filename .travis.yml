@@ -16,9 +16,9 @@ deploy:
     secure: rzxJmBk5mHjt1qpJeYQFTEE/2UDt2nTc49PIVD2dMwSB/lxee87MGJzZGZ5gF6UWD095dtfDNqOuAzLoGhy8TUtV3hbPQEhIEXK3HmB4aapJTieZbyYxzA78dx+Kcrf0zUj8/qeAD5YiJyv1lsWQug8dXFKyw8UWLS5lo6G39Yq/WfzbC2vjqRRtC/AswlebuGH0odkkemw8Vzy16eGewyuUcFHZ/yBEvx+3OI18Pb8kOr5OZPcU249dMfWSMxu+0dLI/1nMa6d2odnHzRvA1L/J5eVAfrk49LWslZ2usCpcZ9crOUG4YgvU8b1g907JgU8BCrwEyv1ZvWLh4xcDbLvcJcARHGEMsOQBi+3bSmvLhljV6nJ5UGAs6C8TZXpiHJOgTLcqx3c1Aozuup7k/wpBsAOpX1ygJIS6nrM5DwpFf+C+X3QcaO/L6hCyPjN7papw8nrmQtjPekBL51cjwdHjixZiu8Y1RMIjB7/8ti5aY4tzkE4N2k/NlDcb04I1XIXYfwiWl3N5fz/1XOrFw0plyRvyU3BvaG+8GubcB3SaD/YzoMnNjA3OYCAOOCMhNYFUlsf9xQ3YNaG8RhjRm6Nsxcg3t+BUMtje4s1Lw8k0T2X2aIhSINd1vhyuSDeDjmJCGWdhKhPRJ8tRVpf98lUPMae29XeUUnIWcjPkfyk=
   on:
     tags: true
-    repo: mpasternak/wosclient
+    repo: iplweb/wosclient
     python: 3.6
-
+    env: TOXENV=py36
 
 matrix:
   include:
