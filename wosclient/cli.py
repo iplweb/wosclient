@@ -31,7 +31,7 @@ from wosclient import wosclient
         allow_dash=True
     ))
 @click.command()
-def lookup_ids(infile, outfile, user, password, args=None, auto_envvar_prefix='WOS'):
+def lookup_ids(infile, outfile, user, password, args=None):
     if outfile == "-":
         outfile = sys.stdout
     else:
@@ -72,7 +72,7 @@ def lookup_ids(infile, outfile, user, password, args=None, auto_envvar_prefix='W
               prompt=True,
               default=lambda: os.environ.get('WOS_USER', ''))
 @click.command()
-def main(pmid, doi, user, password, args=None, auto_envvar_prefix='WOS'):
+def main(pmid, doi, user, password, args=None):
     if pmid is None and doi is None:
         click.echo("Please specify DOI or PubMedID")
         return 1
