@@ -2,6 +2,7 @@
 
 """Console script for wosclient."""
 import csv
+import os
 import sys
 
 import click
@@ -9,8 +10,16 @@ import click
 from wosclient import wosclient
 
 
-@click.option('--user', help='API username')
-@click.option('--password', help='API password')
+@click.option('--password',
+              help='API password',
+              prompt=True,
+              hide_input=True,
+              default=lambda: os.environ.get('WOS_PASSWORD', ''))
+@click.option('--user',
+              help='API username',
+              hide_input=True,
+              prompt=True,
+              default=lambda: os.environ.get('WOS_USER', ''))
 @click.argument('infile', type=click.File('r'))
 @click.option(
     '--outfile',
@@ -22,7 +31,7 @@ from wosclient import wosclient
         allow_dash=True
     ))
 @click.command()
-def lookup_ids(infile, outfile, user, password, args=None):
+def lookup_ids(infile, outfile, user, password, args=None, auto_envvar_prefix='WOS'):
     if outfile == "-":
         outfile = sys.stdout
     else:
@@ -51,12 +60,19 @@ def lookup_ids(infile, outfile, user, password, args=None):
     return 0
 
 
-@click.option('--user', help='API username')
-@click.option('--password', help='API password')
 @click.option('--pmid', help='PubMedID (for example, 19883697)')
 @click.option('--doi', help='DOI (for example, 10.1016/j.bbr.2009.10.030)')
+@click.option('--password',
+              help='API password',
+              prompt=True,
+              hide_input=True,
+              default=lambda: os.environ.get('WOS_PASSWORD', ''))
+@click.option('--user',
+              help='API username',
+              prompt=True,
+              default=lambda: os.environ.get('WOS_USER', ''))
 @click.command()
-def main(pmid, doi, user, password, args=None):
+def main(pmid, doi, user, password, args=None, auto_envvar_prefix='WOS'):
     if pmid is None and doi is None:
         click.echo("Please specify DOI or PubMedID")
         return 1
@@ -69,4 +85,4 @@ def main(pmid, doi, user, password, args=None):
 
 
 if __name__ == "__main__":
-    sys.exit(main(auto_envvar_prefix='WOS'))  # pragma: no cover
+    sys.exit(main())  # pragma: no cover
