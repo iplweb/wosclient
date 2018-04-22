@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+import logging
 import requests
 
 from wosclient import const
@@ -47,11 +48,13 @@ def prepare_request(items, username, password, local_id="id",
         local_id_value = pub.get(local_id) or pub.get(local_id.upper())
         if local_id_value is None:
             local_id_value = str(idx)
-        this_item = ET.Element("map", name=local_id_value)
+        this_item = ET.Element("map", name=str(local_id_value))
         for k, v in pub.items():
             if v is None or k not in const.ALLOWED_KEYS:
+                msg = "Unknown key %r for prepare_request, ignored" % k
+                logging.warning(msg)
                 continue
-            de = ET.Element("val", name=k.lower())
+            de = ET.Element("val", name=str(k).lower())
             de.text = v.strip()
             this_item.append(de)
         map_items.append(this_item)
