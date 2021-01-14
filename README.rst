@@ -14,12 +14,6 @@ Web of Science API Client
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/iplweb/wosclient/shield.svg
-     :target: https://pyup.io/repos/github/iplweb/wosclient/
-     :alt: Updates
-
-
-
 Web of Science Article Match Retrival Client for Python by IPLweb.
 
 This product is not endorsed or connected with Clarivate Analytics in any way.
