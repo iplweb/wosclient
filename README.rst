@@ -20,7 +20,7 @@ Web of Science API Client
 
 
 
-Web of Science Article Match Retrival Client for Python 3.6 by IPLweb.
+Web of Science Article Match Retrival Client for Python by IPLweb.
 
 This product is not endorsed or connected with Clarivate Analytics in any way.
 
@@ -35,7 +35,6 @@ Features
 * query the Article Match Retrival API of Web of Science Core Collection,
 * internally uses requests_ to handle web traffic and generators_ to save
   memory, Click_ for handling of the command-line,
-* supports Python 3.6.
 
 .. _Requests: http://docs.python-requests.org/en/master/
 .. _generators: https://wiki.python.org/moin/Generators
