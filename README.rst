@@ -6,8 +6,8 @@ Web of Science API Client
 .. image:: https://img.shields.io/pypi/v/wosclient.svg
         :target: https://pypi.python.org/pypi/wosclient
 
-.. image:: https://img.shields.io/travis/iplweb/wosclient.svg
-        :target: https://travis-ci.org/iplweb/wosclient
+.. image:: https://github.com/iplweb/wosclient/actions/workflows/test.yml/badge.svg
+        :target: https://github.com/iplweb/wosclient/actions/workflows/test.yml
 
 .. image:: https://readthedocs.org/projects/wosclient/badge/?version=latest
         :target: https://wosclient.readthedocs.io/en/latest/?badge=latest
