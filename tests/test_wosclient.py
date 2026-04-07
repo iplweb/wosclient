@@ -130,7 +130,7 @@ def test_cli_main(mocker, example_single_reply):
 
     runner = CliRunner()
 
-    result = runner.invoke(cli.main)
+    result = runner.invoke(cli.main, input="testuser\ntestpass\n")
     assert result.exit_code == 0
     assert "Please specify DOI or PubMedID" in result.output
 
@@ -141,6 +141,8 @@ def test_cli_main(mocker, example_single_reply):
         cli.main,
         args=[
             "--doi=test",
+            "--user=testuser",
+            "--password=testpass",
         ],
     )
     assert result.exit_code == 0
@@ -162,6 +164,8 @@ def test_cli_lookup_ids(mocker, example_reply, example_csv_path):
         cli.lookup_ids,
         [
             example_csv_path,
+            "--user=testuser",
+            "--password=testpass",
         ],
     )
     assert result.exit_code == 0
